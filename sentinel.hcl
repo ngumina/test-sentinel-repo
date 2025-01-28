@@ -2,7 +2,14 @@ policy "s3-block-public-access-account-level" {
   source = "https://registry.terraform.io/v2/policies/hashicorp/CIS-Policy-Set-for-AWS-S3-Terraform/1.0.3/policy/s3-block-public-access-account-level.sentinel?checksum=sha256:c9d0c9d650c862aa2c6568296123a8f7e0d1fa8b8938545783f960f5c62f9c60"
   enforcement_level = "advisory"
 }
-
+policy "ec2-ebs-encryption-enabled" {
+  source = "https://registry.terraform.io/v2/policies/hashicorp/CIS-Policy-Set-for-AWS-EC2-Terraform/1.0.3/policy/ec2-ebs-encryption-enabled.sentinel?checksum=sha256:5358b0a7737f510a965988e8f2d26928deaed176df5476b38676d5d17e59bc90"
+  enforcement_level = "advisory"
+}
+policy "ec2-metadata-imdsv2-required" {
+  source = "https://registry.terraform.io/v2/policies/hashicorp/CIS-Policy-Set-for-AWS-EC2-Terraform/1.0.3/policy/ec2-metadata-imdsv2-required.sentinel?checksum=sha256:f71b8850541d73418c155981ce9d347a3cf12b6ed2d54fac97a69fe4ffd0689e"
+  enforcement_level = "advisory"
+}
 module "tfplan-functions" {
   source = "https://registry.terraform.io/v2/policies/hashicorp/CIS-Policy-Set-for-AWS-S3-Terraform/1.0.3/policy-module/tfplan-functions.sentinel?checksum=sha256:419b8c886cdf551893af60defba396632804f40e8c4f442e6505ac58c9edc5a1"
 }
