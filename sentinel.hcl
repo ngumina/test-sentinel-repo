@@ -8,6 +8,11 @@ policy "ec2-security-group-ingress-traffic-restriction-port-22" {
   enforcement_level = "hard-mandatory"
 }
 
+policy "rds-encryption-at-rest-enabled" {
+  source = "https://registry.terraform.io/v2/policies/hashicorp/CIS-Policy-Set-for-AWS-RDS-Terraform/1.0.4/policy/rds-encryption-at-rest-enabled.sentinel?checksum=sha256:51a364709f94ed7c57b10379e62ba2f8d7cd817bf5aae05566b170c493e95743"
+  enforcement_level = "advisory"
+}
+
 policy "ec2-ebs-encryption-enabled" {
   source = "https://registry.terraform.io/v2/policies/hashicorp/CIS-Policy-Set-for-AWS-EC2-Terraform/1.0.3/policy/ec2-ebs-encryption-enabled.sentinel?checksum=sha256:5358b0a7737f510a965988e8f2d26928deaed176df5476b38676d5d17e59bc90"
   enforcement_level = "soft-mandatory"
