@@ -18,6 +18,16 @@ policy "ec2-ebs-encryption-enabled" {
   enforcement_level = "advisory"
 }
 
+policy "rds-encryption-at-rest-enabled" {
+  source = "https://registry.terraform.io/v2/policies/hashicorp/CIS-Policy-Set-for-AWS-Terraform/1.0.1/policy/rds-encryption-at-rest-enabled.sentinel?checksum=sha256:77d2be4f53a8e2234a6b8a2c4acba63ba51c6f2d2fd63da3989993701633cc40"
+  enforcement_level = "advisory"
+}
+
+policy "rds-public-access-disabled" {
+  source = "https://registry.terraform.io/v2/policies/hashicorp/CIS-Policy-Set-for-AWS-Terraform/1.0.1/policy/rds-public-access-disabled.sentinel?checksum=sha256:8627bc798281e1666f84aeb5aeb80f0d38c7caaed1a67adb0267c69b0667d145"
+  enforcement_level = "advisory"
+}
+
 module "report" {
   source = "https://registry.terraform.io/v2/policies/hashicorp/CIS-Policy-Set-for-AWS-Terraform/1.0.1/policy-module/report.sentinel?checksum=sha256:1f414f31c2d6f7e4c3f61b2bc7c25079ea9d5dd985d865c01ce9470152fa696d"
 }
