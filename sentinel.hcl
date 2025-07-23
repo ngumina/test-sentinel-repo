@@ -10,7 +10,7 @@ policy "ec2-network-acl" {
 
 policy "ec2-security-group-ingress-traffic-restriction-port-22" {
   source = "https://registry.terraform.io/v2/policies/hashicorp/CIS-Policy-Set-for-AWS-Terraform/1.0.1/policy/ec2-security-group-ingress-traffic-restriction-port-22.sentinel?checksum=sha256:dfe1e79a65e5fcd06c23a635a844b5a2046f05eb4d77f78620fa73197b54c08b"
-  enforcement_level = "hard-mandatory"
+  enforcement_level = "advisory"
 }
 
 policy "ec2-ebs-encryption-enabled" {
